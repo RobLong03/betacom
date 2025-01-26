@@ -23,8 +23,9 @@
       "dom"
     ],
     "paths": {
-      "src/styles.scss": ["./src/styles.scss"]
-    }
+  "src/*": ["./src/*"],
+  "src/styles.scss": ["./src/styles.scss"]
+}
 
   },
   "angularCompilerOptions": {
