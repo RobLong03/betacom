@@ -1,10 +1,11 @@
 
 <h1>Angular Router App</h1>
 <nav>
-  <ul>
-    <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
-    <li><a routerLink="/prova" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
-  </ul>
-</nav>
 
-<router-outlet />
+<mat-toolbar color="primary">
+  <a routerLink="/prova" routerLinkActive="active">Prova</a>
+  <a routerLink="/prova2" routerLinkActive="active">Prova2</a>
+  <button mat-button (click)="toggleTheme()">Toggle Theme</button>
+</mat-toolbar>
+
+<router-outlet>
