@@ -1,47 +1,32 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
-  MAT_FORM_FIELD,
-  MatFormField
-} from "./chunk-HHIW5B3F.js";
-import {
-  NG_VALUE_ACCESSOR
-} from "./chunk-57IXI4VC.js";
-import {
   Overlay,
   OverlayConfig,
   OverlayModule
-} from "./chunk-7TM5P37O.js";
+} from "./chunk-YMA66TJJ.js";
 import {
   CdkScrollableModule,
   ViewportRuler
-} from "./chunk-SG4CTKHX.js";
+} from "./chunk-LJ2ZW6FA.js";
 import {
   TemplatePortal
-} from "./chunk-OD34KDX7.js";
+} from "./chunk-72JRZTTP.js";
+import {
+  MAT_FORM_FIELD,
+  MatFormField
+} from "./chunk-UDX5LOLN.js";
 import "./chunk-G3ZWQIAE.js";
 import {
-  ActiveDescendantKeyManager,
-  DOWN_ARROW,
   Directionality,
-  ENTER,
-  ESCAPE,
   MAT_OPTGROUP,
   MAT_OPTION_PARENT_COMPONENT,
   MatCommonModule,
   MatOption,
   MatOptionModule,
   MatOptionSelectionChange,
-  Platform,
-  TAB,
-  UP_ARROW,
   _countGroupLabelsBeforeOption,
-  _getEventTarget,
-  _getOptionScrollPosition,
-  addAriaReferencedId,
-  coerceStringArray,
-  hasModifierKey,
-  removeAriaReferencedId
-} from "./chunk-YQAMT5RL.js";
+  _getOptionScrollPosition
+} from "./chunk-6UTKUVFP.js";
 import {
   animate,
   group,
@@ -49,13 +34,31 @@ import {
   style,
   transition,
   trigger
-} from "./chunk-GM76I425.js";
-import "./chunk-FN24OEXR.js";
+} from "./chunk-FZD5SYDN.js";
+import "./chunk-6I3I2S2Y.js";
+import {
+  ActiveDescendantKeyManager,
+  DOWN_ARROW,
+  ENTER,
+  ESCAPE,
+  Platform,
+  TAB,
+  UP_ARROW,
+  _getEventTarget,
+  addAriaReferencedId,
+  coerceStringArray,
+  hasModifierKey,
+  removeAriaReferencedId
+} from "./chunk-PM2PMVHK.js";
+import "./chunk-C573GRUA.js";
+import {
+  NG_VALUE_ACCESSOR
+} from "./chunk-EHKH65WR.js";
 import {
   CommonModule,
   DOCUMENT,
   NgClass
-} from "./chunk-HTM3DHMT.js";
+} from "./chunk-2WG5QLMT.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,

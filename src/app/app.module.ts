@@ -39,11 +39,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './HomePage/home/home.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     ProvaComponent,
     Prova2Component,
+    HomeComponent,
 
 
   ],
@@ -81,7 +84,9 @@ import { RouterModule } from '@angular/router';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatIconModule,
+    FormsModule
   ],
 
   providers: [

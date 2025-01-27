@@ -1,0 +1,14 @@
+.home-container {
+  text-align: center;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+
+.example-spacer{
+  flex: 5 1 50%;
+}
+a ~ .mdc-button {
+  margin-left: 10px;
+
+}
