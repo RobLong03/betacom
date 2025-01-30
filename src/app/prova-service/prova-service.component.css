@@ -1,0 +1,86 @@
+
+.home-container {
+  text-align: center;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.cerchio{
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 50%;
+  margin: 2rem auto;
+
+}
+
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.index-circle {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.online-badge {
+  background-color: green;
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  margin-top: 4px;
+  font-size: 12px;
+  max-width: fit-content;
+}
+
+.offline-badge {
+  background-color: red;
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  margin-top: 4px;
+  font-size: 12px;
+  max-width: fit-content;
+}
+

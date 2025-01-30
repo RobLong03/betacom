@@ -1,0 +1,11 @@
+<div *ngFor="let persona of persone">
+  <p [style.color]="persona.color">{{ persona.nome }} {{ persona.cognome }} - {{ persona.isOnline ? 'Online' : 'Offline' }}</p>
+</div>
+
+<app-prova3 [data]="persone" (mandaDatiEvent)="OnreciveData($event)" ></app-prova3>
+
+@if ((href==='/figlio')) {
+  <a mat-button  routerLink="/prova3">Vai su padre</a>
+}
+
+

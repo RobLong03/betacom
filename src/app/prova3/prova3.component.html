@@ -1,0 +1,19 @@
+ <!-- <app-home [data]="persone"></app-home> -->
+<!-- componente padre  -->
+ <div>
+  <input type="radio" name="coloreEvid" (click)="cambiaColoreEvid('red')">Rosso
+  <input type="radio" name="coloreEvid" (click)="cambiaColoreEvid('yellow')">Giallo
+  <input type="radio" name="coloreEvid" (click)="cambiaColoreEvid('green')">Verde
+ </div>
+<p [appHighlight]="colore" defaultColor="pink" >{{title |extends:'pipe session' |uppercase}} del{{oggi|date:'d/MM/yyyy - h:mm'}}</p>
+
+<p>{{numero|number:'2.1-2'}}: currency {{ numero | currency:'EUR' }}</p>
+<button (click)="onClick()">Aggiorna</button>
+<button (click)="onRestore()">Ripristina</button>
+<input #inputSaluti value="Ciao" />
+<button (click)="mandaDati()">Invia dati</button>
+
+<a  mat-button  routerLink="/figlio">Vai su figlio</a>
+<button (click)="getTemplate()">Read template</button>
+
+

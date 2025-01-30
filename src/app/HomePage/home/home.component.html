@@ -1,5 +1,59 @@
-<div class="home-container">
-  <h1>Welcome to Test App</h1>
-  <p>This is a simple Angular test homepage.</p>
-  <button (click)="showAlert()">Click Me</button>
+<div class="home-container" style="text-align: center; padding: 2rem;">
+  <h1 style="font-size: 2.5rem; color: #333;">Welcome to Test App</h1>
+  <p style="font-size: 1.2rem; color: #666;">This is a simple Angular test homepage.</p>
+  <button (click)="showAlert()" style="padding: 0.5rem 1rem; font-size: 1rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Click Me
+  </button>
 </div>
+
+<ng-template *ngIf="daVedere; then bloccoTrue else bloccoFalse"></ng-template>
+
+<ng-template #bloccoTrue>
+  <div *ngFor="let persona of persone; index as i; first as isFirst; last as isLast" style="margin: 1rem auto; max-width: 600px; text-align: left; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+    <ul style="list-style-type: none; padding: 0;">
+      <li>
+        <strong style="font-size: 1.2rem;"><strong [ngStyle]="{ 'background-color': persona.Online ? colorOn : colorOff, color: 'white', padding: '0.2rem 0.4rem' }" class="cerchio">{{ i + 1 }}</strong>{{ persona.nome }} {{ persona.cognome }}</strong>
+        <div style="font-size: 0.9rem; margin-top: 0.5rem;">
+          <span [ngStyle]="{color:persona.color}">Status: </span>
+          <samp [ngClass]="persona.Online ? 'online-badge' : 'offline-badge'">
+            {{ persona.Online ? 'Online' : 'Offline' }}
+          </samp>
+        </div>
+        <div style="font-size: 0.8rem; margin-top: 0.2rem;">
+          <span *ngIf="isFirst">(First entry)</span>
+          <span *ngIf="isLast">(Last entry)</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div [ngSwitch]="numero">
+    <h3 *ngSwitchCase="1">uno</h3>
+    <h3 *ngSwitchCase="2">due</h3>
+    <h3 *ngSwitchCase="3">tre</h3>
+    <h3 *ngSwitchCase="4">quattro</h3>
+    <h3 *ngSwitchCase="5">cinque</h3>
+    <h3 *ngSwitchDefault>non so</h3>
+  </div>
+  @switch (stringa) {
+
+    @case ("pippo") {
+      <h3>è pippo</h3>
+
+    }
+    @case ("pluto") {
+      <h3>è pluto</h3>
+
+    }
+    @default {
+      <h3>è vuoto</h3>
+    }
+  }
+  
+</ng-template>
+
+<ng-template #bloccoFalse>
+  <div class="home-container" style="text-align: center; padding: 2rem;">
+    <p style="font-size: 1.2rem; color: #666;">Non c'è niente da vedere</p>
+
+  </div>
+</ng-template>

@@ -16,3 +16,28 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+.cerchio{
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 50%;
+  margin: 2rem auto;
+
+}
+
+
+
+.online-badge {
+  background-color: green;
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.offline-badge {
+  background-color: red;
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+

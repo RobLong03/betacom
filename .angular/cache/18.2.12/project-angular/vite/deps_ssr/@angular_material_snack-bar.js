@@ -1,5 +1,9 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
+  MatButton,
+  MatButtonModule
+} from "./chunk-WWRPJICC.js";
+import {
   Overlay,
   OverlayConfig,
   OverlayModule
@@ -13,10 +17,6 @@ import {
   TemplatePortal
 } from "./chunk-72JRZTTP.js";
 import "./chunk-G3ZWQIAE.js";
-import {
-  MatButton,
-  MatButtonModule
-} from "./chunk-WWRPJICC.js";
 import {
   MatCommonModule
 } from "./chunk-6UTKUVFP.js";

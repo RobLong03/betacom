@@ -41,12 +41,27 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './HomePage/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { Prova3Component } from './prova3/prova3.component';
+import { HighlightDirective } from './directive/highlight.directive';
+import { FiglioComponent } from './figlio/figlio.component';
+import { ExtendsPipe } from './pipe/extends.pipe';
+
+import { ContattoComponent } from './contatto/contatto.component';
+import { ProvaServiceComponent } from './prova-service/prova-service.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ProvaComponent,
     Prova2Component,
     HomeComponent,
+    Prova3Component,
+    HighlightDirective,
+    FiglioComponent,
+    ExtendsPipe,
+    ProvaServiceComponent,
+    ContattoComponent
 
 
   ],
