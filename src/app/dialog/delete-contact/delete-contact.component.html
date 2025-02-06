@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Remove del contatto {{persona.name}}{{persona.congone}}</h2>
+<mat-dialog-content>
+  <p>What's your favorite ?</p>
+  <mat-form-field>
+    <mat-label>Sei sicuro</mat-label>
+
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="optionSelected('no')">No</button>
+  <button mat-button (click)="optionSelected('si')">Si</button>
+</mat-dialog-actions>

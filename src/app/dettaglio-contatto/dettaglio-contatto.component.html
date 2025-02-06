@@ -1,0 +1,48 @@
+
+<mat-card class="user-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Dettaglio Utente</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+    <mat-card-content>
+      <div class="form-container">
+        <div class="input-field">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput type="text" formControlName="nome" required>
+          </mat-form-field>
+        </div>
+        <div class="input-field">
+          <mat-form-field appearance="fill">
+            <mat-label>Cognome</mat-label>
+            <input matInput type="text" formControlName="cognome" required>
+          </mat-form-field>
+        </div>
+        <div class="input-field">
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" required>
+          </mat-form-field>
+        </div>
+        <div class="input-field">
+          <mat-form-field appearance="fill">
+            <mat-label>Colore</mat-label>
+            <mat-select formControlName="colore">
+              <mat-option value="Green">Green</mat-option>
+              <mat-option value="Red">Red</mat-option>
+              <mat-option value="Blue">Blue</mat-option>
+              <mat-option value="Black">Black</mat-option>
+              <mat-option value="Yellow">Yellow</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <p class="error-msg" *ngIf="msg !== ''">{{ msg }}</p>
+      <button mat-raised-button style="background-color: green;" type="button"  (click)="onCancel()">Indietro</button>
+      <button mat-raised-button color="primary"type="button"   (click)="onSubmit()"[disabled]="!updateForm.valid">Aggiorna</button>
+      <button mat-raised-button style="background-color: red;" type="button"    (click)="onDelete()">Delete</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

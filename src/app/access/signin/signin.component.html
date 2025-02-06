@@ -1,0 +1,30 @@
+
+<form #signinForm="ngForm" (ngSubmit)="onSubmit(signinForm)">
+  <mat-form-field>
+
+    <mat-label>User name</mat-label>
+    <input matInput type="text" name="username" ngModel required>
+
+  </mat-form-field>
+  <mat-form-field>
+
+    <mat-label>Password</mat-label>
+    <input matInput type="text" name="password" ngModel required>
+
+  </mat-form-field>
+  @if (msg!==null) {
+    <p>Utente non trovato con username e password</p>
+  }
+
+  <div>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!signinForm.valid">Entra</button>
+  </div>
+
+  <div>
+    <button class="btn btn-secondary" type="button" routerLink="/registrazione">Registrazione</button>
+  </div>
+
+
+
+
+</form>

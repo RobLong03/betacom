@@ -8,7 +8,7 @@ import {
   MatCommonModule,
   MatRipple,
   MatRippleModule
-} from "./chunk-6UTKUVFP.js";
+} from "./chunk-DT36NE2M.js";
 import "./chunk-FZD5SYDN.js";
 import "./chunk-6I3I2S2Y.js";
 import {

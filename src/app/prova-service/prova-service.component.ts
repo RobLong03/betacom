@@ -1,6 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServiceService } from './../Service/service.service';
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { PersoneService } from '../Service/service/persone.service';
 
 @Component({
   selector: 'app-prova-service',
@@ -13,14 +14,21 @@ export class ProvaServiceComponent implements OnInit {
   persona:any;
   isProfile:boolean=false;
   inter:number | undefined;
+  response: any;
 
 
-  constructor(private service: ServiceService,private route:ActivatedRoute) {
+  constructor(private service: ServiceService,private route:ActivatedRoute,private serv:PersoneService) {
 
   }
 
   ngOnInit(): void {
+    this.serv.listPersone()
+    .subscribe(resp =>{
+      this.response=resp;
+      this.data=this.response.dati
+    });
 
+    /*
     if (this.route.snapshot.paramMap.get('id')) {
       this.isProfile = true;
       this.inter=parseInt(this.route.snapshot.paramMap.get('id'));
@@ -32,6 +40,7 @@ export class ProvaServiceComponent implements OnInit {
       this.isProfile = false;
       this.data = this.service.getPersone();
     }
+*/
   }
 
   getPersona(value:number):any{

@@ -4,7 +4,7 @@ import {
   MatCommonModule,
   mixinDisabled,
   mixinInitialized
-} from "./chunk-6QFRWORI.js";
+} from "./chunk-WLTN3A6K.js";
 import {
   animate,
   animateChild,
@@ -16,6 +16,7 @@ import {
   trigger
 } from "./chunk-FFPPLRUT.js";
 import "./chunk-45LHGCE4.js";
+import "./chunk-JG74QNAK.js";
 import {
   AriaDescriber,
   ENTER,
@@ -23,7 +24,6 @@ import {
   SPACE,
   coerceBooleanProperty
 } from "./chunk-56G5GH2I.js";
-import "./chunk-JG74QNAK.js";
 import "./chunk-WMSUGNSL.js";
 import {
   ChangeDetectionStrategy,

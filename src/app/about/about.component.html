@@ -1,0 +1,19 @@
+<h1>Elenco Utenti</h1>
+<div style="display: flow-root;" align="center">
+<table class="table table-striped">
+  <thead>
+    <tr align="center">
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      <th scope="col">Ruolo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of listUsers">
+        <td>{{user.userName}}</td>
+        <td>{{user.passWord}}</td>
+        <td>{{user.role}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

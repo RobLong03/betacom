@@ -1,0 +1,64 @@
+
+<!--
+FORM NORMALE
+<form #homeForm="ngForm" (ngSubmit)="onsubmitTemplate()">
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" name="nome" ngModel required="true">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cognome</mat-label>
+    <input matInput type="text" name="cognome" ngModel required="true">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" ngModel required email>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Colore</mat-label>
+    <mat-select name="color" ngModel>
+      <mat-option value="green">Green</mat-option>
+      <mat-option value="red">Red</mat-option>
+      <mat-option value="green">Gren</mat-option>
+    </mat-select>
+
+  </mat-form-field>
+
+   <button mat-raised-button color="primary" type="submit" [disabled]="!homeForm.valid">Invia</button>
+
+</form> -->
+<!-- REACTIVE FORM -->
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" name="nome" formControlName="nome"  required="true">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cognome</mat-label>
+    <input matInput type="text" name="cognome" formControlName="cognome"  required="true">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" formControlName="email" required email>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Colore</mat-label>
+    <mat-select name="color" formControlName="colore">
+      <mat-option value="Green">Green</mat-option>
+      <mat-option value="Red">Red</mat-option>
+      <mat-option value="Black">Black</mat-option>
+      <mat-option value="Yellow">Yellow</mat-option>
+    </mat-select>
+
+  </mat-form-field>
+
+   <button mat-raised-button color="primary" type="submit" [disabled]="!createForm.valid">Invia</button>
+
+</form>
+

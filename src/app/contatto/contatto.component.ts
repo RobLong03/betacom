@@ -1,3 +1,4 @@
+import { PersoneService } from './../Service/service/persone.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../Service/service.service';
@@ -12,7 +13,7 @@ export class ContattoComponent {
   id:number;
   personaContatto:any;
 
-  constructor(private serv:ServiceService, private route:ActivatedRoute) {
+  constructor(private serv:ServiceService, private route:ActivatedRoute,private service:PersoneService) {
 
   }
 
@@ -21,7 +22,12 @@ export class ContattoComponent {
     //controllo variazione dei parametri nell'url
     this.route.paramMap.subscribe(params =>{
       this.id=+params.get("id"); //equivalente di parseInt, perche ricavandolo dalla mappa di parametri mi viene restituito come un oggetto qualsiasi
-      this.personaContatto=this.serv.getPersona(this.id);
+      this.personaContatto=this.service.Persona(this.id).subscribe
+      ((value)=>{
+
+        this.personaContatto=value.dati;
+
+      })
     })
   }
 }

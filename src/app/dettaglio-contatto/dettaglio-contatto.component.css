@@ -1,0 +1,31 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-card-footer {
+  padding: 16px;
+}
+.user-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.input-field {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 250px;
+}
+.error-msg {
+  color: red;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: end;
+  transform: matrix3d(10px,70%,);
+  background-color: antiquewhite;
+}

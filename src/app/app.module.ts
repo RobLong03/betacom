@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -8,7 +8,7 @@ import { ProvaComponent } from './prova/prova.component';
 import { Prova2Component } from './prova2/prova2/prova2.component';
 import { MatTableModule} from '@angular/material/table';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule, provideAnimations} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -40,7 +40,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './HomePage/home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Prova3Component } from './prova3/prova3.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { FiglioComponent } from './figlio/figlio.component';
@@ -48,6 +48,14 @@ import { ExtendsPipe } from './pipe/extends.pipe';
 
 import { ContattoComponent } from './contatto/contatto.component';
 import { ProvaServiceComponent } from './prova-service/prova-service.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { FormComponent } from './form/form.component';
+import { DettaglioContattoComponent } from './dettaglio-contatto/dettaglio-contatto.component';
+import { DeleteContactComponent } from './dialog/delete-contact/delete-contact.component';
+import { SigninComponent } from './access/signin/signin.component';
+import { RegistrazioneComponent } from './access/registrazione/registrazione.component';
+import { AboutComponent } from './about/about.component';
+
 
 
 @NgModule({
@@ -61,7 +69,14 @@ import { ProvaServiceComponent } from './prova-service/prova-service.component';
     FiglioComponent,
     ExtendsPipe,
     ProvaServiceComponent,
-    ContattoComponent
+    ContattoComponent,
+    NotFoundComponent,
+    FormComponent,
+    DettaglioContattoComponent,
+    DeleteContactComponent,
+    RegistrazioneComponent,
+    AboutComponent,
+    SigninComponent
 
 
   ],
@@ -101,12 +116,16 @@ import { ProvaServiceComponent } from './prova-service/prova-service.component';
     MatSortModule,
     MatPaginatorModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
+
   ],
 
   providers: [
     provideClientHydration(),
-    provideHttpClient()
+    provideHttpClient(withFetch()),
+    provideAnimations()
+
   ],
 
   //in angular 18  HttpClientModule  deprecated, use provideHttpClient() instead
